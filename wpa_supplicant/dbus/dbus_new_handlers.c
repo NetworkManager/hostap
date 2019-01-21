@@ -4539,6 +4539,12 @@ static dbus_bool_t wpas_dbus_get_bss_security_prop(
 	if (ie_data->key_mgmt & WPA_KEY_MGMT_FT_FILS_SHA384)
 		key_mgmt[n++] = "wpa-ft-fils-sha384";
 #endif /* CONFIG_FILS */
+#ifdef CONFIG_SAE
+	if (ie_data->key_mgmt & WPA_KEY_MGMT_SAE)
+		key_mgmt[n++] = "sae";
+	if (ie_data->key_mgmt & WPA_KEY_MGMT_FT_SAE)
+		key_mgmt[n++] = "ft-sae";
+#endif /* CONFIG_SAE */
 	if (ie_data->key_mgmt & WPA_KEY_MGMT_NONE)
 		key_mgmt[n++] = "wpa-none";
 
