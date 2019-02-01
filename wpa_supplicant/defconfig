@@ -388,7 +388,7 @@ CONFIG_CTRL_IFACE_DBUS_INTRO=y
 #CONFIG_DYNAMIC_EAP_METHODS=y
 
 # IEEE Std 802.11r-2008 (Fast BSS Transition) for station mode
-#CONFIG_IEEE80211R=y
+CONFIG_IEEE80211R=y
 
 # Add support for writing debug log to a file (/tmp/wpa_supplicant-log-#.txt)
 CONFIG_DEBUG_FILE=y
