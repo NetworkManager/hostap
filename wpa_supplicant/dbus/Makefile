@@ -54,8 +54,6 @@ CFLAGS += $(DBUS_INCLUDE)
 
 LIB_OBJS= \
 	dbus_common.o \
-	dbus_old.o \
-	dbus_old_handlers.o \
 	dbus_new.o \
 	dbus_new_handlers.o \
 	dbus_new_helpers.o \
@@ -63,7 +61,6 @@ LIB_OBJS= \
 	dbus_dict_helpers.o
 
 ifdef CONFIG_WPS
-LIB_OBJS += dbus_old_handlers_wps.o
 LIB_OBJS += dbus_new_handlers_wps.o
 endif
 
